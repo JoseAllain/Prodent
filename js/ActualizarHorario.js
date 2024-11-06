@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function fetchHorarios() {
     // Reemplazar con la URL real de tu API
-    const url = 'http://3.90.165.238:8080/mostrarHorariosDelDoctor';
+    const url = 'http://3.90.165.238/mostrarHorariosDelDoctor';
 
     fetch(url)
         .then(response => response.json())
@@ -42,7 +42,7 @@ function mostrarHorarios(horarios) {
 
 function actualizarDisponibilidadMasiva() {
     // Reemplazar con la URL real de tu API
-    const url = 'http://3.90.165.238:8080/actualizarDisponibilidadMasiva';
+    const url = 'http://3.90.165.238/actualizarDisponibilidadMasiva';
 
     const disponibilidadPorId = {};
     // Llena disponibilidadPorId con los IDs de los horarios y su disponibilidad
