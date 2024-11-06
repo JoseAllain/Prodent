@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function cargarCitasPendientes() {
-    fetch('http://localhost:8080/pendientes')
+    fetch('http://3.90.165.238:8080/pendientes')
         .then(response => response.json())
         .then(citas => {
             // Ordenar las citas por hora de inicio

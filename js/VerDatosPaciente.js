@@ -6,7 +6,7 @@ function toggleModal() {
     var userId = atob(localStorage.getItem('userId'));
     console.log(userId)
     if (userId) {
-        fetch(`http://localhost:8080/perfil/${userId}`)
+        fetch(`http://3.90.165.238:8080/perfil/${userId}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error("Error al obtener los datos del paciente");
