@@ -1,0 +1,368 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;700&family=Poppins:wght@300;400;600;700&family=Roboto:wght@300&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Asegúrate de que el body ocupe al menos toda la altura del viewport */
+    margin: 0;
+}
+
+/* Estilos para el navbar */
+.navbar {
+    background-color: #000; /* Fondo negro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px; /* Espaciado interior del navbar */
+    color: #fff; /* Texto blanco */
+    height: 60px;
+}
+.navbar-right button {
+  margin: 0 5px;
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar-right button:hover {
+  background-color: #0056b3;
+}
+/* Estilos para el enlace "Prodent" a la izquierda */
+.navbar-left a {
+    text-decoration: none;
+    color: #fff; /* Texto blanco */
+    font-weight: bold;
+    font-size: 20px; /* Tamaño de fuente */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.navbar-right a {
+    text-decoration: none;
+    color: #fff; /* Texto blanco */
+    font-size: 16px; /* Tamaño de fuente */
+    margin-right: 10px;
+}
+
+.navbar-right span {
+    margin-right: 10px;
+    border: 2px solid white;  /* Borde blanco */
+    border-radius: 10px;  /* Bordes redondeados */
+    padding: 5px 10px;  /* Espacio interior para que no esté pegado el contenido al borde */
+}
+
+
+
+.dashboard {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.card {
+    width: 500px;
+    padding: 30px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+}
+
+/* Aplica border-radius solo a las esquinas superiores de la primera imagen dentro del contenedor '.dashboard' */
+.dashboard .card:first-child img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card img {
+    width: 100%;
+    height: 350px;
+    width: 400px;
+   
+}
+
+.card h2 {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.card p {
+    margin: 10px 20px;
+    text-align: justify;
+}
+
+.card a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.card a:hover {
+    background-color: #0056b3;
+}
+
+
+/* FOOTER */
+.footer {
+  background-color: #1e1e1e; /* Fondo oscuro */
+  color: white;
+  padding: 20px 0; /* Mayor padding para dar más espacio */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: auto;
+  margin-bottom: -200px;
+}
+
+.footer-content {
+  text-align: center; /* Centra el contenido del footer */
+  width: 90%;
+  max-width: 600px; /* Limita el ancho máximo del contenido */
+}
+
+.footer-content h2 {
+  color: #007BFF; /* Color de texto */
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.phone-number {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.phone-number a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer .social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.footer .social-icons a {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.footer .social-icons a:hover {
+  color: #007BFF; /* Color de hover en los íconos */
+}
+
+.footer .footer-info {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-top: 20px;
+}
+
+/*MODAL*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    
+  }
+  
+  h2 {
+    text-align: center;
+    color: black;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-group {
+    margin: 10px 0;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  .button-group{
+    display: flex;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button + button {
+    margin-left: 10px;
+    background-color: #DE0000;
+    color: white;
+  }
+  
+  button + button:hover {
+    background-color: #a30000;
+  }
+  /* Media Query para Pantallas Medianas (Tablets) */
+@media (max-width: 1024px) {
+  .navbar {
+      flex-direction: column;
+      padding: 15px;
+      height: auto;
+  }
+
+  .dashboard {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+  }
+
+  .card {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+
+  .footer-content h2 {
+      font-size: 1.5rem;
+      text-align: center;
+  }
+}
+
+/* Media Query para Pantallas Pequeñas (Móviles) */
+@media (max-width: 768px) {
+  .navbar-left a {
+      font-size: 18px;
+  }
+
+  .navbar-right a, .navbar-right span {
+      font-size: 14px;
+  }
+
+  .dashboard {
+      margin-top: 20px;
+  }
+
+  .card {
+      width: 90%;
+      padding: 20px;
+  }
+
+  .card img {
+      width: 100%;
+      height: auto;
+  }
+
+  .modal {
+      max-width: 90%;
+      padding: 20px;
+  }
+
+  .footer {
+      padding: 10px;
+      height: auto;
+  }
+
+  .footer-content {
+      width: 100%;
+      text-align: center;
+  }
+
+  .social-icons {
+      justify-content: center;
+      margin-top: 10px;
+  }
+}
+
+/* Media Query para Pantallas Muy Pequeñas (Móviles más pequeños) */
+@media (max-width: 480px) {
+  .navbar {
+      padding: 10px;
+  }
+
+  .navbar-left a {
+      font-size: 16px;
+  }
+
+  .navbar-right a, .navbar-right span {
+      font-size: 12px;
+      margin-right: 5px;
+  }
+
+  .card h2 {
+      font-size: 20px;
+      margin-top: 15px;
+  }
+
+  .card p {
+      font-size: 14px;
+  }
+
+  .modal h2 {
+      font-size: 1.2rem;
+  }
+
+  .modal form {
+      padding: 10px;
+  }
+
+  .footer-content h2 {
+      font-size: 1.2rem;
+  }
+
+  .social-icons a {
+      font-size: 20px;
+  }
+}

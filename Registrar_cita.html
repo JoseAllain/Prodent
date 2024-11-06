@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prodent</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/registrar_cita.css">
+    <link rel="stylesheet" href="./css/modal_perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+</head>
+
+<script>
+    // Verificar si UserId está presente en localStorage
+    var userId = localStorage.getItem('userId');
+
+    if (!userId) {
+        alert("Porfavor inicia sesion")
+        // Si no está presente, redirigir a otra página (por ejemplo, página de inicio de sesión)
+        window.location.href = 'InicioSesion.html';
+    }
+
+
+</script>
+
+
+<body onload="showSchedule('Lun-schedule', document.querySelector('.days button:first-child'))">
+    
+   <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="navbar-left">
+            <a href="Home_Cliente.html">Prodent</a>
+        </div>
+        <div class="navbar-right">
+            <button onclick="adjustFontSize(1)">+</button>
+            <button onclick="adjustFontSize(-1)">-</button>
+            <button onclick="resetFontSize()">Restablecer</button>
+            <a href="index.html" id="logoutLink">Cerrar Sesión</a>
+            <i  onclick="toggleModal(); return false;" class="fas fa-user-circle"></i>
+        </div>
+        
+    </nav>
+    <div id="patientModal" class="modal">
+        <div class="modal-content">
+            <h3>Información del Paciente</h3>
+            <p><strong>Correo:</strong> <span id="correoPaciente">Cargando...</span></p>
+            <p><strong>Nombre:</strong> <span id="nombrePaciente">Cargando...</span></p>
+            <p><strong>DNI:</strong> <span id="dniPaciente">Cargando...</span></p>
+            <p><strong>Teléfono:</strong> <span id="telefonoPaciente">Cargando...</span></p>
+            <button onclick="toggleModal()">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="content">
+        <h2 id="TÍTULO">REGISTRAR CITA</h2>
+        <div class="days">
+            <button onclick="showSchedule('Lun-schedule', this);">LUNES</button>
+            <button onclick="showSchedule('Mar-schedule', this);">MARTES</button>
+            <button onclick="showSchedule('Mie-schedule', this);">MIÉRCOLES</button>
+            <button onclick="showSchedule('Jue-schedule', this);">JUEVES</button>
+            <button onclick="showSchedule('Vie-schedule', this);">VIERNES</button>
+        </div>
+        
+
+        <div id="Lun-schedule" class="schedule"></div>
+        <div id="Mar-schedule" class="schedule"></div>
+        <div id="Mie-schedule" class="schedule"></div>
+        <div id="Jue-schedule" class="schedule"></div>
+        <div id="Vie-schedule" class="schedule"></div>
+
+        <div id="Costo">
+            <span>COSTO:</span>
+            <span id="Precio">S/.15.00</span>
+        </div>
+        <div class="buttons" onsubmit="return validarCredenciales()">
+            <a href="Home_Cliente.html">Regresar</a>
+            
+            <button type="button" class="register-appointment" onclick="registerAppointment()" disabled>Registrar Cita</button>
+
+        </div>
+        
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <h2>Prodent</h2>
+    
+            <!-- Número de teléfono -->
+            <p class="phone-number">
+                Teléfono: <a href="tel:+1234567890">934 334 886</a>
+            </p>
+    
+            <!-- Redes sociales -->
+            <div class="social-icons">
+                <a href="https://www.facebook.com/prodent.pe" class="facebook-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/prodentperu" class="instagram-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.tiktok.com/@prodentperu" class="tiktok-icon" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+    
+            <!-- Información adicional -->
+            <p class="footer-info">&copy; 2024 Prodent. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="./js/RegistrarCita.js"></script>
+    <script src="./js/CerrarSesion.js"></script>
+    <script src="./js/DetectarInactividad.js"></script>
+    <script src="./js/VerDatosPaciente.js"></script>
+
+    <script>
+        // Ajuste de Tamaño de Fuente
+        let fontSize = 1;
+
+        function adjustFontSize(step) {
+            fontSize += step * 0.1;
+            document.body.style.fontSize = fontSize + 'rem';
+        }
+
+        function resetFontSize() {
+            fontSize = 1;
+            document.body.style.fontSize = fontSize + 'rem';
+        }
+    </script>
+    
+</body>
+</html>
