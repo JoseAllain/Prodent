@@ -73,7 +73,7 @@ function submitRegistrationForm() {
         clave: clave
     };
 
-    var url = 'http://3.90.165.238/registro';
+    var url = 'http://98.80.51.122/registro';
 
     fetch(url, {
         method: 'POST',

@@ -25,7 +25,7 @@
                         nuevaClave: nuevaClave
                     };
         
-                    fetch('http://3.90.165.238/cambiarClave', {
+                    fetch('http://98.80.51.122/cambiarClave', {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json',

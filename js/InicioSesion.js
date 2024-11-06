@@ -20,7 +20,7 @@ function validarCredenciales() {
     };
 
     // URL del endpoint de tu backend
-    var url = 'http://3.90.165.238/login'; // Ajusta según tu configuración
+    var url = 'http://98.80.51.122/login'; // Ajusta según tu configuración
 
     fetch(url, {
         method: 'POST',
