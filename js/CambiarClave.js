@@ -25,7 +25,7 @@
                         nuevaClave: nuevaClave
                     };
         
-                    fetch('http://98.80.51.122/cambiarClave', {
+                    fetch('https://prodent.sytes.net/cambiarClave', {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/json',

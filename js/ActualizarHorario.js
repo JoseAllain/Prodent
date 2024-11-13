@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function fetchHorarios() {
     // Reemplazar con la URL real de tu API
-    const url = 'http://98.80.51.122/mostrarHorariosDelDoctor';
+    const url = 'https://prodent.sytes.net/mostrarHorariosDelDoctor';
 
     fetch(url)
         .then(response => response.json())
@@ -42,7 +42,7 @@ function mostrarHorarios(horarios) {
 
 function actualizarDisponibilidadMasiva() {
     // Reemplazar con la URL real de tu API
-    const url = 'http://98.80.51.122/actualizarDisponibilidadMasiva';
+    const url = 'https://prodent.sytes.net/actualizarDisponibilidadMasiva';
 
     const disponibilidadPorId = {};
     // Llena disponibilidadPorId con los IDs de los horarios y su disponibilidad

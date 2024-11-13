@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function cargarCitasPendientes() {
-    fetch('http://98.80.51.122/pendientes')
+    fetch('https://prodent.sytes.net/pendientes')
         .then(response => response.json())
         .then(citas => {
             // Ordenar las citas por hora de inicio
